@@ -1,0 +1,48 @@
+ 
+<% layout('layouts/boilerplate.ejs') -%>
+
+ 
+ <form enctype="multipart/form-data" class="row g-3" style="margin-left: 18%; margin-right: 18%; margin-bottom: 10%; margin-top:1pc;" method="post" action="/listings/create">
+  <h1>Create a new listing</h1>
+  
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Enter Listing Title</label>
+    <input type="text" class="form-control" id="inputEmail4" placeholder="Title" name="listing[title]" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Enter About Listing</label>
+    <input type="text" class="form-control" id="inputPassword4"  placeholder="Description" name="listing[description]" required >
+  </div>
+
+  <!-- <div class="col-12">
+    <label for="inputAddress" class="form-label">Enter Image url</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="url" name="listing[image]" >
+  </div> -->
+
+<div class="input-group mb-3">
+  <input type="file" class="form-control" id="inputGroupFile02" name="listing[image]"  >
+  <!-- <label class="input-group-text" for="inputGroupFile02" > </label> -->
+ </div>
+
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Enter location</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="location"  name="listing[location]" required >
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">Enter Country</label>
+    <input type="text" class="form-control" id="inputCity" placeholder="country"  name="listing[country]" required>
+  </div>
+    <div class="col-md-6">
+    <label for="inputCity" class="form-label">Enter Price</label>
+    <input type="number" class="form-control" id="inputCity" placeholder="In INR"  name="listing[price]" required>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+
+
+
+
+

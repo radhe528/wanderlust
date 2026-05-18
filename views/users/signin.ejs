@@ -1,0 +1,21 @@
+ 
+<% layout('layouts/boilerplate.ejs') -%>
+
+ 
+ <div class="d-flex justify-content-center align-items-center vh-100">
+    
+     <form class="w-100 p-4 border rounded shadow" style="max-width: 400px;" method="post" action="/signin">
+        <h3 class="mb-3 text-center">Sign in</h3>
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" placeholder="Enter username" name="username" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="Enter password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+
+</div>
+

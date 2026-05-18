@@ -1,0 +1,35 @@
+
+<% layout('layouts/boilerplate.ejs') -%>
+
+  <form class="row g-3" style="margin-left: 18%; margin-right: 18%; margin-bottom: 10%; margin-top:1pc;" method="post" action="/listings/edit/<%= list._id %>?_method=PATCH">
+  <h1>Edit Your listing</h1>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Enter Listing Title</label>
+    <input type="text" class="form-control" id="inputEmail4" placeholder="Title" name="listing[title]" value="<%= list.title %>" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Enter About Listing</label>
+    <input type="text" class="form-control" id="inputPassword4"  placeholder="Description" name="listing[description]" value="<%= list.description %>" required>
+  </div>
+
+  <!-- <div class="col-12">
+    <label for="inputAddress" class="form-label">Enter Image url</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="url" name="listing[image]" value="<%= list.image %>" required>
+  </div> -->
+
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Enter location</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="location"  name="listing[location]" value="<%= list.location %>" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">Enter Country</label>
+    <input type="text" class="form-control" id="inputCity" placeholder="country"  name="listing[country]"  value="<%= list.country %>"  required >
+  </div>
+    <div class="col-md-6">
+    <label for="inputCity" class="form-label">Enter Price</label>
+    <input type="number" class="form-control" id="inputCity" placeholder="In INR"  name="listing[price]" value="<%= list.price %>" required >
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>

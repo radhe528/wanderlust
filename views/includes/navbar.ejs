@@ -1,0 +1,34 @@
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/listings"><span class="material-symbols-outlined" style="color: white;">bubble</span></a>
+            &nbsp;&nbsp;
+            <span style="color: white; "> 
+             <% if(currUser) { %>
+            <%= currUser.username %> 
+             <% } %>
+            </span>
+        </div>
+
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/listings">Home</a></li>
+            <li><a href="/listings/new">Add New Listing</a></li>
+
+        <% if(!currUser) { %>
+            <li><a href="/signup">Sign up</a></li>
+            <li><a href="/signin">Sign in</a></li>
+        <% } %>
+        <% if(currUser) { %>
+            <li><a href="/signout">Sign out</a></li>
+        <% } %>
+         </ul>
+
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    
