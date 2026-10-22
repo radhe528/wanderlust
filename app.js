@@ -89,11 +89,7 @@ app.use('/',userRouter);
 app.use('/listings/review',reviewRouter);
 app.use('/listings',listingRouter);
 
-
-// app.use((err,req,res,next)=>{
-// console.log(err.name);
-// next(err); 
-// });
+ 
 
 app.use((req,res,next)=>{
 next(new ExpressError(404,'Page Not Found'));
